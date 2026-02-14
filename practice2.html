@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text">
+    <input id="age" type="number">
+    <input type="email" name="" id="email">
+    <button id="btn">Submit!</button>
+
+    <script>
+        let button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let email = document.getElementById("email").value;
+            fetch("http://localhost:4000/practice2", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    age: age,
+                    email: email
+                })
+            });
+
+            fetch("http://localhost:4000/del/3", {
+                method: "DELETE"
+                
+            })
+        })
+        // getting the data
+        fetch("http://localhost:4000/practice2")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+
+            })
+
+        // for updating the data
+        fetch("http://localhost:4000/practice2/2", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: "nagesh",
+                age: 19,
+                email: "nagesh@gmail.com"
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>

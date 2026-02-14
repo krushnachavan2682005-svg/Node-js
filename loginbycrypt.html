@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Your App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Login Card */
+        .login-card {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            color: white;
+        }
+
+        /* Title */
+        .title {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        /* Focus Effect */
+        .input-group input:focus {
+            box-shadow: 0 0 0 2px #ffffff;
+        }
+
+        /* Extra Options */
+        .extra-options {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .extra-options a {
+            color: #ffffff;
+            font-size: 13px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .extra-options a:hover {
+            opacity: 1;
+        }
+
+        /* Button */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #764ba2;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #f1f1f1;
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login-card">
+            <h2 class="title">Welcome Back</h2>
+            <p class="subtitle">Please login to your account</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input id="name" type="text" placeholder="Enter your username" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="extra-options">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button id="button" type="button" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        let name = document.getElementById("name");
+        let password = document.getElementById("password");
+        let button = document.getElementById("button");
+        button.addEventListener("click", function () {
+            let namevalue = name.value;
+            let passvalue = password.value;
+            bcrypt.genSalt(10, (err, salt) => {
+                bycrypt.hash(passvalue, salt, (err, hash) => {
+
+                    console.log(hash);
+
+                })
+            })
+
+        })
+        try{
+            let responce=fetch("http://localhost//2000/check",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    username:namevalue,
+                    password:passvalue
+                })
+            })
+
+        }
+    
+
+    </script>
+
+</body>
+
+</html>

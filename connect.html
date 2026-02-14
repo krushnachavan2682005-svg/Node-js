@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text">
+    <button id="btn">click</button>
+    <script>
+
+        let button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            alert("the data send succesfully")
+            let inpt = document.getElementById("name").value;
+            fetch("http://localhost:4000/data3", {
+                method: "POST",
+                headers: {
+                    "Content-type": "Application/json"
+                }
+                ,
+                body: JSON.stringify(
+                    {
+                        name: inpt
+
+                    }
+                )
+            })
+    
+        })
+        fetch("http://localhost:4000/data")
+    </script>
+
+</body>
+
+</html>

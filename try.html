@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KrushiFresh | Farm to Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #263238;
+    }
+
+    .btn-green {
+      background: #2E7D32;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 24px;
+    }
+
+    .btn-green:hover {
+      background: #256428;
+      color: white;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+      color: white;
+      padding: 120px 0;
+    }
+
+    .badge-green {
+      background: #E8F5E9;
+      color: #2E7D32;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .card {
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .organic-badge {
+      background: #2E7D32;
+      color: white;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="#">KrushiFresh</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#market">Marketplace</a></li>
+        <li class="nav-item"><a class="nav-link" href="#farmers">Farmers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+        <li class="nav-item"><a class="btn btn-green ms-2">Get Started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">From Farm to Home — Fresh, Organic, Fair</h1>
+    <p class="lead mt-3">No middlemen. Farmers earn more. Families eat healthier.</p>
+    <div class="mt-4">
+      <a class="btn btn-green me-2">Buy Fresh Vegetables</a>
+      <a class="btn btn-outline-light">Join as Farmer</a>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="d-flex justify-content-center gap-3 mt-5 flex-wrap">
+      <span class="badge badge-green">🌱 Certified Organic</span>
+      <span class="badge badge-green">🚜 Direct from Farmers</span>
+      <span class="badge badge-green">💰 Transparent Pricing</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">How It Works</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-3">
+        <div class="card p-4">
+          <i class="bi bi-person-badge fs-1 text-success"></i>
+          <h6 class="mt-3 fw-bold">Farmer Lists Produce</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-4">
+          <i class="bi bi-cart-check fs-1 text-success"></i>
+          <h6 class="mt-3 fw-bold">Customer Orders</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-4">
+          <i class="bi bi-basket fs-1 text-success"></i>
+          <h6 class="mt-3 fw-bold">Fresh Harvest</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-4">
+          <i class="bi bi-truck fs-1 text-success"></i>
+          <h6 class="mt-3 fw-bold">Direct Delivery</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FARMER SECTION -->
+<section class="section" id="farmers">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Empowering Farmers</h2>
+    <p class="mb-5">Farmers earn up to <strong>40% more</strong> by selling directly.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h6 class="fw-bold">Ramesh Patil</h6>
+          <p>Village: Nashik</p>
+          <p>Crops: Tomato, Spinach</p>
+          <span class="organic-badge">Organic Farmer</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h6 class="fw-bold">Sunita Deshmukh</h6>
+          <p>Village: Satara</p>
+          <p>Crops: Onion, Beans</p>
+          <span class="organic-badge">Organic Farmer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETPLACE -->
+<section class="section bg-light" id="market">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Fresh Marketplace</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1582515073490-dc99a4a1b98b" class="card-img-top">
+          <div class="card-body">
+            <h6>Organic Tomato</h6>
+            <p>₹40 / kg</p>
+            <small>Farmer: Ramesh</small><br>
+            <span class="organic-badge mt-2 d-inline-block">Organic</span>
+            <button class="btn btn-green w-100 mt-3">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate cards -->
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARENT PRICING -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">Transparent Pricing</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5>Traditional Supply ❌</h5>
+          <p>Farmer earns ₹20</p>
+          <p>Customer pays ₹60</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5>KrushiFresh Model ✅</h5>
+          <p>Farmer earns ₹35</p>
+          <p>Customer pays ₹45</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT DASHBOARD -->
+<section class="section bg-light" id="impact">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">Our Impact</h2>
+    <div class="row g-4">
+      <div class="col-md-3"><div class="card p-4"><h3>1,200+</h3><p>Farmers</p></div></div>
+      <div class="col-md-3"><div class="card p-4"><h3>40%</h3><p>Income Increase</p></div></div>
+      <div class="col-md-3"><div class="card p-4"><h3>150T</h3><p>Organic Produce</p></div></div>
+      <div class="col-md-3"><div class="card p-4"><h3>5,000+</h3><p>Happy Families</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-4">
+  <div class="container text-center">
+    <p>Built for farmers & healthy families 🌱</p>
+    <small>© 2026 KrushiFresh</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
